@@ -237,7 +237,7 @@ When you have all of these components, you can run the update statement. */
 
 
 SELECT product_id, quantity
-FROM (SELECT product_id, quanity,
+FROM (SELECT product_id, quantity,
 	ROW_NUMBER() OVER (PARTITION BY product_id ORDER BY market_date DESC) 
 	AS rn
 FROM vendor_inventory vi
